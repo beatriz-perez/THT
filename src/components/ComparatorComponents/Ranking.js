@@ -2,9 +2,17 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
 export default class Ranking extends Component {
-    render() {
-        const {info:{apiInfo, selection: {from, to, amount}}, media} = this.props;
+    constructor(props) {
+        super(props);
+        this.handleOrder = this.handleOrder.bind(this);
+    }
 
+    handleOrder(name) {
+        this.props.task(name);
+    }
+
+    render() {
+        const {info:{apiInfo, selection: {to}}, media, task} = this.props;
         const generateJSX = (item, index) => {
             const name = item[0].toLowerCase();
             const price = item[1];
@@ -45,7 +53,6 @@ export default class Ranking extends Component {
                     <Link className="comparisonLine__box text text__medium" to={`/compare/detail/${name}`}>
                         <img className="comparisonLine__logo" src={logo} alt={`${name.toLowerCase()} logo`}/>
                         <p className="comparisonLine__name text__medium--bold">{name.toLowerCase()}</p>
-                        <p className="comparisonLine__amount">{amount}</p>
                         <p className="comparisonLine__price">{price}</p>
                         {placePin}
                     </Link>
@@ -53,9 +60,8 @@ export default class Ranking extends Component {
             )
         };
 
-        const results = Object.entries(apiInfo)
-            .sort((a, b) => a[1] > b[1] ? -1 : 1)
-            .map(generateJSX);
+        const ordered = Object.entries(apiInfo).sort((a, b) => a[1] > b[1] ? -1 : 1);
+        const results = ordered.map(generateJSX);
 
         return (
             <div className="ranking">
@@ -65,7 +71,6 @@ export default class Ranking extends Component {
                         <div className="comparisonLine__box text text__medium">
                             <i className="comparisonLine__logo fas fa-wallet"></i>
                             <p className="comparisonLine__name text__medium--bold"></p>
-                            <p className="comparisonLine__amount">{from}</p>
                             <p className="comparisonLine__price">{to}</p>
                             <p className="comparisonLine__position text__medium--bold">ranking position</p>
                         </div>

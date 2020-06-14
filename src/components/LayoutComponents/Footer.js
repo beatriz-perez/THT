@@ -3,7 +3,7 @@ import React from 'react';
 export default class Footer extends React.Component {
 
     render() {
-        const {media:{name, url, website}} = this.props;
+        const {media:{name, website}} = this.props;
 
         return (
             <footer className="footer" id="footer" role="contentinfo">

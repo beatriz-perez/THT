@@ -27,21 +27,29 @@
         align-items: center;
     }
     &__logo{
-        width: 40px;
+        width: 30px;
         text-align: center;
-        font-size: 30px;
+        font-size: 25px;
+        @include mediaSize(tablet){
+            width: 35px;
+            font-size: 30px;
+        }    
     }
     &__name{
         width: 80px;
     }
-    &__amount{
-        width: 40px;
-    }
     &__price{
-        width: 146px;
+        width: 110px;
         overflow: hidden;
+        @include mediaSize(tablet){
+            width: 146px;
+            overflow: hidden;
+        }    
     }
     &__position{
-        min-width: 120px;
+        width: 70px;
+        @include mediaSize(tablet){
+            min-width: 120px;
+        }    
     }
 }

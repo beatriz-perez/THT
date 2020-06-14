@@ -1,7 +1,7 @@
 // BUTTONS
 .button{
-    min-width: 120px;
-    min-height: 40px;
+    min-width: 70px;
+    min-height: 38px;
     border-radius: 25px;
     @include centerFlexRow;
     &:hover{

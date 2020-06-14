@@ -39,19 +39,15 @@ $backgroundFooter: $colorTheme5;
 // ---> Mobile:
     $landingBodyHeightMobile: calc(100vh - 40px);
     $footerHeightMobile: 40px;
-
     $headerHeightMobile: 60px;
-    $sectionHeightMobile: calc(100vh - 40px - 60px);
-
+    $sectionHeightMobile: calc(100vh - 100px);
 // ---> Tablet:
     $landingBodyHeightTablet: calc(100vh - 40px);
     $footerHeightTablet: 40px;
-
     $headerHeightTablet: 90px;
-    $sectionHeightTablet: calc(100vh - 40px - 90px);
+    $sectionHeightTablet: calc(100vh - 130px);
 // ---> Desktop:
     $landingBodyHeightDesktop: calc(100vh - 50px);
     $footerHeightDesktop: 50px;
-    
     $headerHeightDesktop: 90px;
-    $sectionHeightDesktop: calc(100vh - 50px - 90px);
+    $sectionHeightDesktop: calc(100vh - 140px);

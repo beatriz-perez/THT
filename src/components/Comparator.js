@@ -21,6 +21,7 @@ export default class Comparator extends Component {
     constructor(props) {
         super(props);
         this.changeSelection = this.changeSelection.bind(this);
+        this.getBest = this.getBest.bind(this);
         this.fetchInfo = this.fetchInfo.bind(this);
         this.state = {
             apiInfo: {},
@@ -28,7 +29,8 @@ export default class Comparator extends Component {
                 from: 'LTC',
                 to: 'BTC',
                 amount: 1
-            }
+            },
+            best: ''
         }
     }
 
@@ -60,6 +62,9 @@ export default class Comparator extends Component {
         this.setState({ selection: newSelection })
         this.fetchInfo();
     };
+    getBest(name) {
+        this.setState({ best: name })
+    }
 
 
     render() {
@@ -73,12 +78,12 @@ export default class Comparator extends Component {
                     <Switch>
 
                         <Route exact path="/compare">
-                            <Ranking info={this.state} media={walletLogos} />
+                            <Ranking info={this.state} media={walletLogos} task={this.getBest}/>
                         </Route>
 
                         <Route
                             path="/compare/detail/:name"
-                            render={routerProps => <Deatil match={routerProps.match} info={this.state} />}
+                            render={routerProps => <Deatil match={routerProps.match} info={this.state} media={walletLogos} />}
                         />
 
                     </Switch>
