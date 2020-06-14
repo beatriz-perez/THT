@@ -21,7 +21,6 @@ export default class Comparator extends Component {
     constructor(props) {
         super(props);
         this.changeSelection = this.changeSelection.bind(this);
-        this.getBest = this.getBest.bind(this);
         this.fetchInfo = this.fetchInfo.bind(this);
         this.state = {
             apiInfo: {},
@@ -29,11 +28,9 @@ export default class Comparator extends Component {
                 from: 'LTC',
                 to: 'BTC',
                 amount: 1
-            },
-            best: ''
+            }
         }
     }
-
 
     componentDidMount() {
         const savedState = JSON.parse(localStorage.getItem('mylocalinfo'));
@@ -62,10 +59,6 @@ export default class Comparator extends Component {
         this.setState({ selection: newSelection })
         this.fetchInfo();
     };
-    getBest(name) {
-        this.setState({ best: name })
-    }
-
 
     render() {
         const {externalResourcesList:{walletLogos, currencyOptions, media}} = externalResourcesList;

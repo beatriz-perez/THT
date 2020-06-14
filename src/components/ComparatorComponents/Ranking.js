@@ -2,17 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
 export default class Ranking extends Component {
-    constructor(props) {
-        super(props);
-        this.handleOrder = this.handleOrder.bind(this);
-    }
-
-    handleOrder(name) {
-        this.props.task(name);
-    }
 
     render() {
-        const {info:{apiInfo, selection: {to}}, media, task} = this.props;
+        const {info:{apiInfo, selection: {to}}, media} = this.props;
         const generateJSX = (item, index) => {
             const name = item[0].toLowerCase();
             const price = item[1];
