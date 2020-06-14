@@ -1,4 +1,19 @@
 // TITLES
+.title{
+    font-family: $fontExtra;
+    font-weight: $fontExtraBold;
+    color: $colorTextBase;
+    text-transform: none;
+    font-size: 20px;
+    &__main{
+        font-size: 90px;
+    }
+    &__subMain{
+        font-size: 40px;
+        color: $colorTheme1;
+    }
+
+}
 
 // TEXTS
 .text{
@@ -6,9 +21,20 @@
     font-weight: $fontRegular;
     color: $colorTextBase;
     text-transform: none;
-
     &__base{
         font-size: 14px;
+        &--bold{
+            font-weight: $fontBold;
+        }
+    }
+    &__medium{
+        font-size: 16px;
+        &--bold{
+            font-weight: $fontBold;
+        }
+    }
+    &__big{
+        font-size: 20px;
         &--bold{
             font-weight: $fontBold;
         }

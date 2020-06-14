@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import externalResourcesList from '../data/resources.json';
 
 // Componentes:
-import LandingPageBody from './LandingPageBody';
+import LandingPageBody from './LandingComponents/LandingPageBody';
 import Footer from './LayoutComponents/Footer';
 
 export default class LandingPage extends Component {
@@ -12,10 +12,10 @@ export default class LandingPage extends Component {
         const {externalResourcesList:{media}} = externalResourcesList;
 
         return (
-            <div>
+            <React.Fragment>
                 <LandingPageBody/>
                 <Footer media={media}/>
-            </div>
+            </React.Fragment>
         )
     }
 }

@@ -30,27 +30,28 @@ $fontBold: 400;
 $fontRegular: 300;
 
 // BACKGROUNDS
-$backgroundHeader: $colorWhite;
+$backgroundLanding: $colorTheme5;
+$backgroundHeader: $colorTheme5;
 $bacKgroundSection: $colorTheme4;
-$backgroundFooter: $colorWhite;
+$backgroundFooter: $colorTheme5;
 
 // MEASUREMENTS
 // ---> Mobile:
-    $landingBodyHeightMobile: calc(100vh - 60px);
-    $footerHeightMobile: 60px;
+    $landingBodyHeightMobile: calc(100vh - 65px);
+    $footerHeightMobile: 65px;
 
     $headerHeightMobile: auto;
     $sectionHeightMobile: auto;
 
 // ---> Tablet:
-    $landingBodyHeightTablet: calc(100vh - 60px);
-    $footerHeightTablet: 60px;
+    $landingBodyHeightTablet: calc(100vh - 65px);
+    $footerHeightTablet: 65px;
 
     $headerHeightTablet: 15vh;
     $sectionHeightTablet: 80vh;
 // ---> Desktop:
-    $landingBodyHeightDesktop: calc(100vh - 60px);
-    $footerHeightDesktop: 60px;
+    $landingBodyHeightDesktop: calc(100vh - 65px);
+    $footerHeightDesktop: 65px;
     
     $headerHeightDesktop: 15vh;
-    $sectionHeightDesktop: 80vh;
+    $sectionHeightDesktop: calc(85vh - 65px);

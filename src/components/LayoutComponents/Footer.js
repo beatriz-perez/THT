@@ -31,6 +31,11 @@ export default class Footer extends React.Component {
                         alt={`${name}logo`}
                     />
                 </a>
+                <p className="text text__base">
+                    with 
+                    <i className="loveIcon far fa-heart"></i>
+                </p>
+
             </footer>
         );
     }

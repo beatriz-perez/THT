@@ -14,3 +14,18 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+// FLEX-BOX CENTERING
+@mixin centerFlexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin centerFlexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+

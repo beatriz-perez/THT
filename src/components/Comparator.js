@@ -12,9 +12,9 @@ import Header from './LayoutComponents/Header';
 import Section from './LayoutComponents/Section';
 import Footer from './LayoutComponents/Footer';
 
-import Form from './Form';
-import Ranking from './Ranking';
-import Deatil from './Deatil';
+import Form from './ComparatorComponents/Form';
+import Ranking from './ComparatorComponents/Ranking';
+import Deatil from './ComparatorComponents/Deatil';
 
 
 export default class Comparator extends Component {
@@ -66,7 +66,7 @@ export default class Comparator extends Component {
         const {externalResourcesList:{walletLogos, currencyOptions, media}} = externalResourcesList;
 
         return (
-            <div>
+            <React.Fragment>
                 <Header title="Título de la aplicación" />
                 <Section id="centralSection" title="Sección principal" role="main content">
                     <Form info={this.state.selection} media={currencyOptions} task={this.changeSelection} />
@@ -84,7 +84,7 @@ export default class Comparator extends Component {
                     </Switch>
                 </Section>
                 <Footer media={media}/>
-            </div>
+            </React.Fragment>
         )
     }
 }
