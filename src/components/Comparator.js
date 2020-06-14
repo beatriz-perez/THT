@@ -1,57 +1,89 @@
 import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom';
+
+//Datos:
+import externalResourcesList from '../data/resources.json';
 
 //Servicios:
 import { fetchApiInfo } from '../services/APIservice';
-
 
 // Componentes:
 import Header from './LayoutComponents/Header';
 import Section from './LayoutComponents/Section';
 import Footer from './LayoutComponents/Footer';
 
+import Form from './Form';
+import Ranking from './Ranking';
+import Deatil from './Deatil';
+
 
 export default class Comparator extends Component {
     constructor(props) {
         super(props);
+        this.changeSelection = this.changeSelection.bind(this);
         this.fetchInfo = this.fetchInfo.bind(this);
         this.state = {
-            apiInfo: [],
+            apiInfo: {},
             selection: {
-              pair: 'LTC-BTC',
-              amount: 1
-            }      
+                from: 'LTC',
+                to: 'BTC',
+                amount: 1
+            }
         }
     }
 
+
     componentDidMount() {
         const savedState = JSON.parse(localStorage.getItem('mylocalinfo'));
-        if(!savedState) {
-          this.fetchInfo();
+        if (!savedState) {
+            this.fetchInfo();
         } else {
-          this.setState(savedState);
+            this.setState(savedState);
         }
     }
     componentDidUpdate() {
         localStorage.setItem('mylocalinfo', JSON.stringify(this.state));
     }
-    
+
     fetchInfo() {
-        let pairQuery = this.state.selection.pair;
+        let pairQueryFrom = this.state.selection.from;
+        let pairQueryTo = this.state.selection.to;
         let amountQuery = this.state.selection.amount;
-        fetchApiInfo(pairQuery, amountQuery) 
-        .then(data => { this.setState({ apiInfo: data });})
-        .catch((error)=> { console.log(error); });
+        fetchApiInfo(pairQueryFrom, pairQueryTo, amountQuery)
+            .then(data => { this.setState({ apiInfo: data }); })
+            .catch((error) => { console.log(error); });
     }
-    
+
+    changeSelection(name, value) {
+        const newSelection = this.state.selection;
+        newSelection[name] = value;
+        this.setState({ selection: newSelection })
+        this.fetchInfo();
+    };
+
+
     render() {
+        const {externalResourcesList:{walletLogos, currencyOptions, media}} = externalResourcesList;
+
         return (
             <div>
                 <Header title="Título de la aplicación" />
                 <Section id="centralSection" title="Sección principal" role="main content">
-                </Section>
-                <Footer />
+                    <Form info={this.state.selection} media={currencyOptions} task={this.changeSelection} />
+                    <Switch>
 
-                
+                        <Route exact path="/compare">
+                            <Ranking info={this.state} media={walletLogos} />
+                        </Route>
+
+                        <Route
+                            path="/compare/detail/:name"
+                            render={routerProps => <Deatil match={routerProps.match} info={this.state} />}
+                        />
+
+                    </Switch>
+                </Section>
+                <Footer media={media}/>
             </div>
         )
     }

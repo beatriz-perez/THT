@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export default class Header extends React.Component {
@@ -8,11 +9,11 @@ export default class Header extends React.Component {
             <header className="container__page--header" id="header" role="navigation">
                 <div className="container__general">
                     <div className="container__section--header">
-
-                        <h1 className="text__SITE--title">
-                            {this.props.title}
-                        </h1>
-
+                        <Link to={`/`}>
+                            <h1 className="text__SITE--title">
+                                {this.props.title}
+                            </h1>
+                        </Link>
                     </div>
                 </div>
             </header>
