@@ -1,3 +1,16 @@
 // TITLES
 
 // TEXTS
+.text{
+    font-family: $fontBase;
+    font-weight: $fontRegular;
+    color: $colorTextBase;
+    text-transform: none;
+
+    &__base{
+        font-size: 14px;
+        &--bold{
+            font-weight: $fontBold;
+        }
+    }
+}

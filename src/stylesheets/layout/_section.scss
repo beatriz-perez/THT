@@ -1,11 +1,7 @@
 // ESTILOS DE CONTENEDOR -----------------------------------------
-.container__page--section{
-    width: 100vw;
-    background-color: $bacKgroundSection;
-    border-bottom: 1px solid $colorTheme4;
-}
 .container__section--section{
     width: 100%;
+    background-color: $bacKgroundSection;
     height: $sectionHeightMobile;
 
     padding-top: 20px;

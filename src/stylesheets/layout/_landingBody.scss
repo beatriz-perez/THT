@@ -1,0 +1,9 @@
+.landing{
+    height: $landingBodyHeightMobile;
+    @include mediaSize(tablet){
+        height: $landingBodyHeightTablet;
+    }
+    @include mediaSize(desktop){
+        height: $landingBodyHeightDesktop;
+    }
+}

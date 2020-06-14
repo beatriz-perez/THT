@@ -1,14 +1,11 @@
 // ESTILOS DE CONTENEDOR -----------------------------------------
-.container__page--footer{
+.footer{
     width: 100vw;
-    background-color: $backgroundFooter;
-    border-top: 1px solid $colorTheme4;
-}
-.container__section--footer{
-    width: 100%;
     height: $footerHeightMobile;
-    min-height: 20px;
-    
+    border-top: 1px solid $colorShadow;
+    background-color: $backgroundFooter;
+    overflow: hidden;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +19,17 @@
 }
 
 // ESTILOS DE ELEMENTOS -------------------------------------------
-
-.footer__text{
-    white-space: pre;
+.logoContainer{
+    position: relative;
+    height: $footerHeightMobile;
+    width:200px;
+    @include mediaSize(tablet){
+        height: $footerHeightTablet;
+    }
+    @include mediaSize(desktop){
+        height: $footerHeightDesktop;
+    }
+}
+.logo{
+    @include centerAll;
 }

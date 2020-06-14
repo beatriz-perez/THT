@@ -1,44 +1,56 @@
-// THEME COLORS
-$colorTheme1: #FF299C;
-$colorTheme2: #EF27A6;
-$colorTheme3: #706F6F;
-$colorTheme4: #B0B5B3;
-$colorTheme5: #DBDBDB;
-
-$colorWhite: white;
-$colorBlack: black;
-$colorRed: red;
+// BASIC COLORS
+$colorWhite: #FFFFFF;
+$colorMiddle: #292929;
+$colorBlack: #000000;
+$colorRed: #960200;
 $colorTransparent: transparent;
+$colorShadow: #5C5C5C;
+
+
+// THEME COLORS
+$colorTheme1: #426A5A;
+$colorTheme2: #04151F;
+$colorTheme3: #432534;
+$colorTheme4: #FAFAFA;
+$colorTheme5: $colorWhite;
 
 // TEXT COLORS
 $colorTextBase: $colorBlack;
-$colorTextMiddle: $colorTheme3;
+$colorTextMiddle: $colorMiddle;
 $colorTextLight: $colorWhite;
 $colorTextAlert: $colorRed;
 
 // FONTS
-$fontBig: 'Comfortaa', cursive;
+$fontExtra: 'Comfortaa', cursive;
 $fontBase: 'Roboto', sans-serif;
-$fontButton: 'Roboto', sans-serif;
+$fontButton: $fontBase;
 
-$fontExtraBold: 800;
-$fontBold: 700;
-$fontRegular: 400;
+$fontExtraBold: 600;
+$fontBold: 400;
+$fontRegular: 300;
 
 // BACKGROUNDS
 $backgroundHeader: $colorWhite;
-$bacKgroundSection: $colorWhite;
+$bacKgroundSection: $colorTheme4;
 $backgroundFooter: $colorWhite;
 
 // MEASUREMENTS
-$headerHeightMobile: auto;
-$sectionHeightMobile: auto;
-$footerHeightMobile: auto;
+// ---> Mobile:
+    $landingBodyHeightMobile: calc(100vh - 60px);
+    $footerHeightMobile: 60px;
 
-$headerHeightTablet: 15vh;
-$sectionHeightTablet: 80vh;
-$footerHeightTablet: 5vh;
+    $headerHeightMobile: auto;
+    $sectionHeightMobile: auto;
 
-$headerHeightDesktop: 15vh;
-$sectionHeightDesktop: 80vh;
-$footerHeightDesktop: 5vh;
+// ---> Tablet:
+    $landingBodyHeightTablet: calc(100vh - 60px);
+    $footerHeightTablet: 60px;
+
+    $headerHeightTablet: 15vh;
+    $sectionHeightTablet: 80vh;
+// ---> Desktop:
+    $landingBodyHeightDesktop: calc(100vh - 60px);
+    $footerHeightDesktop: 60px;
+    
+    $headerHeightDesktop: 15vh;
+    $sectionHeightDesktop: 80vh;

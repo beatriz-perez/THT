@@ -6,16 +6,13 @@ export default class Header extends React.Component {
 
     render() {
         return (
-            <header className="container__page--header" id="header" role="navigation">
-                <div className="container__general">
-                    <div className="container__section--header">
-                        <Link to={`/`}>
-                            <h1 className="text__SITE--title">
-                                {this.props.title}
-                            </h1>
-                        </Link>
-                    </div>
-                </div>
+            <header className="header" id="header" role="navigation">
+                <Link to={`/`}>
+                    <h1 className="text__SITE--title">
+                        <i className="fas fa-coins"></i>
+                        {this.props.title}
+                    </h1>
+                </Link>
             </header>
         );
     }
