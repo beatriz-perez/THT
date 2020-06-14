@@ -67,8 +67,8 @@ export default class Comparator extends Component {
 
         return (
             <React.Fragment>
-                <Header title="Título de la aplicación" />
-                <Section id="centralSection" title="Sección principal" role="main content">
+                <Header/>
+                <Section id="main" role="main content">
                     <Form info={this.state.selection} media={currencyOptions} task={this.changeSelection} />
                     <Switch>
 

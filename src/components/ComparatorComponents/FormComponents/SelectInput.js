@@ -22,7 +22,7 @@ export default class SelectInput extends Component {
                 return (
                     <option key={index} value={item.queryValue}>{item.name}</option>
                 )
-            }
+            };
         };
         const options = media.map(generateJSX);
 
@@ -31,7 +31,7 @@ export default class SelectInput extends Component {
                 <label htmlFor={name} className="label text__regular">
                     {labelText}
                 </label>
-                <select id={name} value={value} onChange={this.handleChange}>
+                <select className="input" id={name} value={value} onChange={this.handleChange}>
                     {options}
                 </select>
             </div>

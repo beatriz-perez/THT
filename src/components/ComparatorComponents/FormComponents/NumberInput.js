@@ -14,16 +14,17 @@ export default class NumberInput extends Component {
         const { name, value, labelText, sampleText } = this.props;
         return (
             <div className="inputBox">
-                <label htmlFor={name} className="label text__base">
+                <label htmlFor={name} className="label">
                     {labelText}
                 </label>
                 <input
-                        type="number"  
-                        id={name} 
-                        name={name} 
-                        value={value} 
-                        placeholder={sampleText}
-                        onChange={this.handleChange}
+                    className="input"
+                    type="number"  
+                    id={name} 
+                    name={name} 
+                    value={value} 
+                    placeholder={sampleText}
+                    onChange={this.handleChange}
                 />  
             </div>
         )

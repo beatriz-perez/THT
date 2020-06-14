@@ -17,25 +17,16 @@ export default class Footer extends React.Component {
                         rel="noopener noreferrer"
                     > Beatriz </a>
                     for 
-                </p>
                 <a
-                    className="logoContainer"
+                    className="text text__base text__base--bold"
                     href={website}
                     title={`go to ${name} website`}
                     target="_blank"
                     rel="noopener noreferrer"
-                >
-                    <img 
-                        className="logo" 
-                        src={url} 
-                        alt={`${name}logo`}
-                    />
-                </a>
-                <p className="text text__base">
+                > ElevenYellow </a>
                     with 
                     <i className="loveIcon far fa-heart"></i>
                 </p>
-
             </footer>
         );
     }

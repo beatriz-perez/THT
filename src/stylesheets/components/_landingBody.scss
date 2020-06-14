@@ -19,13 +19,22 @@
 
 // ESTILOS DE ELEMENTOS -------------------------------------------
 .landingBox{
-    width: 600px;
-    height: 400px;
+    width: 90vw;
+    height: 75vh;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @include mediaSize(tablet){
+        width: 600px;
+        height: 350px;
+    }
+    @include mediaSize(desktop){
+        width: 600px;
+        height: 350px;
+    }    
 
     &__textsBox{
         text-align: center;
@@ -36,9 +45,15 @@
         justify-content: space-between;
         align-items: flex-start;
         &--step{
-            width: 25%;
+            width: 30%;
             @include centerFlexColumn;
             text-align: center;
+            @include mediaSize(tablet){
+                width: 25%;
+            }
+            @include mediaSize(desktop){
+                width: 25%;
+            }            
         }
         &--number{
             color: $colorTheme3;

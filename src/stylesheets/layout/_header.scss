@@ -2,13 +2,12 @@
 .header{
     width: 100vw;
     height: $headerHeightMobile;
-
+    border-bottom: 1px solid $colorShadow;
     background-color: $backgroundHeader;
-    border-bottom: 1px solid $colorTheme4;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 
     @include mediaSize(tablet){
         height: $headerHeightTablet;
@@ -16,7 +15,15 @@
     @include mediaSize(desktop){
         height: $headerHeightDesktop;
     }
-
 }
 
 // ESTILOS DE ELEMENTOS -------------------------------------------
+.titleBox{
+    padding: 5px;
+    margin-left: 5px;
+    @include centerFlexColumn;
+    @include mediaSize(tablet){
+        padding: 10px;
+        margin-left: 20px;
+    }
+}

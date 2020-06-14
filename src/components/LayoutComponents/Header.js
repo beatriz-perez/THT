@@ -7,11 +7,9 @@ export default class Header extends React.Component {
     render() {
         return (
             <header className="header" id="header" role="navigation">
-                <Link to={`/`}>
-                    <h1 className="text__SITE--title">
-                        <i className="fas fa-coins"></i>
-                        {this.props.title}
-                    </h1>
+                <Link className="titleBox title" to={`/`}>
+                    <h1 className="title__header">rate advisor</h1>
+                    <h2 className="title__subHeader">your best choice</h2>
                 </Link>
             </header>
         );

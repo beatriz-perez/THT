@@ -5,14 +5,9 @@ export default class Section extends React.Component {
 
     render() {
         return (
-            <section className="container__page--section" id={this.props.id} role={this.props.role}>
-                <div className="container__general">
-                    <div className="container__section--section">
-                        <h2>{this.props.title}</h2>
-
-                        {this.props.children}
-                        
-                    </div>
+            <section className="main" id={this.props.id} role={this.props.role}>
+                <div className="mainBox" >
+                    {this.props.children}          
                 </div>
             </section>
         );
@@ -20,7 +15,6 @@ export default class Section extends React.Component {
 }
 Section.defaultProps = {
     id: 'centralSection',
-    title: 'sección principal',
     role: 'main content'
 }
 Section.propTypes = {

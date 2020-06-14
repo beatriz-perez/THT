@@ -1,0 +1,47 @@
+// ESTILOS DE CONTENEDOR -----------------------------------------
+.formBox{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-right: 1px solid $colorShadow;
+    background-color: $colorTheme4;
+}
+
+// ESTILOS DE ELEMENTOS -------------------------------------------
+.form__title{
+    color: $colorTheme1;
+    margin-bottom: 1.5em;
+}
+.form__selection{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    .currencyLogo{
+        height: 40px;
+    }
+    .changeIcon{
+        color: $colorMiddle;
+        font-size: 18px;
+    }
+}
+.inputBox{
+    .label{
+        display: block;
+    }
+    .input{
+        width: 250px;
+        height: 30px;
+        margin: 15px 0 20px 0;
+        padding: 0 10px;
+        border-radius: 15px;
+        border: 1px solid $colorShadow;
+        box-shadow: none;
+        &:focus{
+            outline: none;
+        }
+    }
+}

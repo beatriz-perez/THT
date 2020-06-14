@@ -1,11 +1,10 @@
 // ESTILOS DE CONTENEDOR -----------------------------------------
-.container__section--section{
+.main{
     width: 100%;
     background-color: $bacKgroundSection;
     height: $sectionHeightMobile;
+    position: relative;
 
-    padding-top: 20px;
-    padding-bottom: 20px;
 
     @include mediaSize(tablet){
         height: $sectionHeightTablet;
@@ -18,7 +17,15 @@
 }  
 
 // ESTILOS DE ELEMENTOS -------------------------------------------
+.mainBox{
+    @include centerAll;
+    width: 800px;
+    height: 600px;
+    background-color: $colorTheme5;
+    box-shadow: 7px 7px 10px 7px $colorShadow;
 
-.section__title{
-    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 600px;
+    overflow: hidden;
 }
