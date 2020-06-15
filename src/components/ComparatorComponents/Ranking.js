@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 export default class Ranking extends Component {
@@ -72,4 +73,9 @@ export default class Ranking extends Component {
             </div>
         )
     }
+}
+
+Ranking.propTypes = {
+    info: PropTypes.object.isRequired,
+    media: PropTypes.object.isRequired,
 }

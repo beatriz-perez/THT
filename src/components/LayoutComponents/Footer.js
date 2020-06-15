@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Footer extends React.Component {
 
@@ -30,4 +31,8 @@ export default class Footer extends React.Component {
             </footer>
         );
     }
+}
+
+Footer.propTypes = {
+    media: PropTypes.object.isRequired
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 export default class Deatil extends Component {
@@ -84,3 +85,9 @@ export default class Deatil extends Component {
         )
     }
 }
+
+Deatil.propTypes = {
+    info: PropTypes.object.isRequired,
+    media: PropTypes.object.isRequired,
+}
+

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
 // Componentes:
 import SelectInput from './FormComponents/SelectInput';
@@ -63,4 +64,10 @@ export default class Form extends Component {
             </form>
         )
     }
+}
+
+Form.propTypes = {
+    info: PropTypes.object.isRequired,
+    media: PropTypes.array.isRequired,
+    task: PropTypes.func.isRequired
 }

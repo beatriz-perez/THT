@@ -71,7 +71,7 @@ export default class Comparator extends Component {
                     <Switch>
 
                         <Route exact path="/compare">
-                            <Ranking info={this.state} media={walletLogos} task={this.getBest}/>
+                            <Ranking info={this.state} media={walletLogos} />
                         </Route>
 
                         <Route

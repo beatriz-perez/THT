@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 export default class Header extends React.Component {
 
@@ -14,10 +13,4 @@ export default class Header extends React.Component {
             </header>
         );
     }
-}
-Header.defaultProps = {
-    title: 'aplicación react'
-}
-Header.propTypes = {
-    title: PropTypes.string.isRequired
 }

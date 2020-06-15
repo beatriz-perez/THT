@@ -44,4 +44,6 @@ SelectInput.propTypes = {
     value: PropTypes.string.isRequired,
     task: PropTypes.func.isRequired,
     labelText: PropTypes.string.isRequired,
+    media: PropTypes.array.isRequired,
+    compare: PropTypes.string.isRequired
 }

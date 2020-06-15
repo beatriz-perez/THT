@@ -16,15 +16,15 @@ export default class LandingPageBody extends Component {
                     <ul className="landingBox__stepsBox text">
                         <li className="landingBox__stepsBox--step">
                             <p className="landingBox__stepsBox--number text__big text__big--bold">1</p>
-                            <p className="landingBox__stepsBox--text text__medium text__medium--bold">selecciona la moneda que tienes y la que quieres</p>
+                            <p className="landingBox__stepsBox--text text__medium text__medium--bold">select the currency you have and the one you want</p>
                         </li>
                         <li className="landingBox__stepsBox--step">
                             <p className="landingBox__stepsBox--number text__big text__big--bold">2</p>
-                            <p className="landingBox__stepsBox--text text__medium text__medium--bold">indica la cantidad para calcular el precio total</p>
+                            <p className="landingBox__stepsBox--text text__medium text__medium--bold">enter an amount to calculate total price</p>
                         </li>
                         <li className="landingBox__stepsBox--step">
                             <p className="landingBox__stepsBox--number text__big text__big--bold">3</p>
-                            <p className="landingBox__stepsBox--text text__medium text__medium--bold">compara y descubre tu mejor opción</p>
+                            <p className="landingBox__stepsBox--text text__medium text__medium--bold">compare rates and discover your best option</p>
                         </li>
                     </ul>
                     <Link to={`/compare`} className="landingBox__button button button__color1 text text__big text__big--bold">

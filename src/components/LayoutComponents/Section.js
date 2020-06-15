@@ -14,7 +14,7 @@ export default class Section extends React.Component {
     }
 }
 Section.defaultProps = {
-    id: 'centralSection',
+    id: 'main',
     role: 'main content'
 }
 Section.propTypes = {
